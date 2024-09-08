@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "e6c75fc1-51f8-40ce-ab5c-f98aa573bb13",
+		"name": "Spring3.2-Kafka-DLT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "Publish User Info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 101,\r\n    \"firstName\": \"Aloke\",\r\n    \"lastName\": \"Das\",\r\n    \"email\": \"alokebd@gmail.com\",\r\n    \"gender\": \"M\",\r\n    \"ipAddress\": \"192.168.2.31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/producer/publish/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer",
+						"publish",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish User Info DLT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 102105,\r\n    \"firstName\": \"Mayank\",\r\n    \"lastName\": \"Das\",\r\n    \"email\": \"mayank@gmail.com\",\r\n    \"gender\": \"M\",\r\n    \"ipAddress\": \"126.130.43.183\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/producer/publish/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer",
+						"publish",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish User (DTL and non-DTL)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 101,\r\n    \"firstName\": \"Aloke\",\r\n    \"lastName\": \"Das\",\r\n    \"email\": \"alokebd@gmail.com\",\r\n    \"gender\": \"M\",\r\n    \"ipAddress:\": \"127.0.0.2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/producer/publish/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer",
+						"publish",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
